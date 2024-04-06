@@ -1,0 +1,146 @@
+:root {
+    /* Primary color */
+    --orange: hsl(25, 97%, 53%);
+
+    /* Neutral color */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Overpass";
+}
+
+.container {
+    width: 400px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.rating {
+    display: block;
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: var(--very-dark-blue);
+    border-radius: 999px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.rating .title {
+    padding: 20px 0;
+}
+
+.body {
+    color: var(--medium-grey);
+}
+
+.rating .body {
+    padding-bottom: 18px;
+}
+
+.button-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+
+.rating-btn {
+
+    font-size: 22px;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--very-dark-blue);
+    padding: 10px 16px;
+    color: var(--light-grey);
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transform: 0.1s;
+}
+
+.rating-btn:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.rating-btn.active {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+.btn {
+    font-size: 16px;
+    width: 100%;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.thanks {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thanks-image {
+    padding-bottom: 20px;
+}
+
+.summary {
+    padding: 10px 16px;
+    background-color: var(--very-dark-blue);
+    color: var(--orange);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.thanks .title {
+    padding: 20px;
+}
+
+.thanks .body {
+    text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
